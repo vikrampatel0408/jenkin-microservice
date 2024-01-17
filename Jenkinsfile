@@ -11,7 +11,7 @@ pipeline {
 		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
 	}
 
-	stages {
+	// stages {
 		stage('Checkout') {
 			steps {
 				sh 'mvn --version'
@@ -71,15 +71,15 @@ pipeline {
 // 		}
 // 	} 
 	
-// 	post {
-// 		always {
-// 			echo 'Im awesome. I run always'
-// 		}
-// 		success {
-// 			echo 'I run when you are successful'
-// 		}
-// 		failure {
-// 			echo 'I run when you fail'
-// 		}
-// 	}
+	post {
+		always {
+			echo 'Im awesome. I run always'
+		}
+		success {
+			echo 'I run when you are successful'
+		}
+		failure {
+			echo 'I run when you fail'
+		}
+	}
 // }
